@@ -3,7 +3,6 @@
  */
 
 const form = document.getElementById('form');
-console.warn(form);
 
 CONFIG
   .forEach((item, x) => {
@@ -60,4 +59,22 @@ function createAnswer(blockIndex, answerIndex, answer) {
   optionContainer.appendChild(label);
 
   return optionContainer;
+}
+
+function checkResult() {
+  const formData = $("form").serializeArray();
+
+  if (formData.length !== CONFIG.length) {
+    return console.error('Not all the form is filled up');
+  }
+
+  formData.forEach((answer, i) => answer.value !== CONFIG[i].correctAnswer ?
+    updateLabel(answer.value, 'text-danger') :
+    updateLabel(answer.value, 'text-success')
+  );
+}
+
+function updateLabel(inputValue, classToAdd) {
+  const inputId = $('input[value="'+inputValue+'"]').attr('id');
+  $('label[for="'+inputId+'"]').addClass(classToAdd);
 }

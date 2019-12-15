@@ -1,0 +1,23 @@
+{
+  "name": "school-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foorbol/school-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foorbol/school-test/issues"
+  },
+  "homepage": "https://github.com/foorbol/school-test#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery-slim": "^3.0.0"
+  }
+}

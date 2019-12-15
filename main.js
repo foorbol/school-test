@@ -18,6 +18,9 @@ CONFIG
       const optionContainer = document.createElement('div');
       const input = document.createElement('input');
       const label = document.createElement('label');
+      label.classList.add('form-check-label');
+
+      input.setAttribute('type', 'radio');
 
       optionContainer.appendChild(input);
       optionContainer.appendChild(label);

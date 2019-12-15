@@ -2,13 +2,29 @@
  * Main logic
  */
 
-const container = document.getElementById('container');
-console.warn(container);
+const form = document.getElementById('form');
+console.warn(form);
 
 CONFIG
-  .forEach((item, i) => {
-    const heading = document.createElement('h1');
+  .forEach((item) => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('form-check');
+
+    const heading = document.createElement('h2');
     heading.textContent = item.heading;
-    container.appendChild(heading);
-    console.warn(heading);
+    wrapper.appendChild(heading);
+
+    item.wrongAnswers.forEach((answer) => {
+      const optionContainer = document.createElement('div');
+      const input = document.createElement('input');
+      const label = document.createElement('label');
+
+      optionContainer.appendChild(input);
+      optionContainer.appendChild(label);
+
+      wrapper.appendChild(optionContainer);
+    });
+
+    form.appendChild(wrapper);
+    // console.warn(heading);
   });

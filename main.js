@@ -12,7 +12,11 @@ CONFIG
 
     wrapper.appendChild(heading);
 
-    item.wrongAnswers
+    const allAnswers = item.wrongAnswers.map(d => d);
+    allAnswers.push(item.correctAnswer);
+    allAnswers.sort(() => Math.random() - 0.5);
+
+    allAnswers
       .forEach((answer, y) => {
         const answerElement = createAnswer(x, y, answer);
         wrapper.appendChild(answerElement);

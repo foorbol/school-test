@@ -35,6 +35,7 @@ function createWrapper() {
 function createHeading(content) {
   const heading = document.createElement('h2');
   heading.textContent = content;
+  // heading.classList.add('mr-24');
 
   return heading;
 }

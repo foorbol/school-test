@@ -27,6 +27,7 @@ CONFIG
 function createWrapper() {
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
+  wrapper.classList.add('m-4');
 
   return wrapper;
 }
@@ -35,7 +36,6 @@ function createWrapper() {
 function createHeading(content) {
   const heading = document.createElement('h2');
   heading.textContent = content;
-  // heading.classList.add('mr-24');
 
   return heading;
 }
